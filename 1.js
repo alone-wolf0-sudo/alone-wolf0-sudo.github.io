@@ -2,7 +2,6 @@ xhr=new XMLHttpRequest();
 xhr.withCredentials=true;
 xhr.open("GET","https://www.sephora.com/api/users/profiles/current/full?includeApis=profile");
 xhr.onreadystatechange=()=>{if(xhr.readyState==4){
-var resp=xhr.response;
 var resp=JSON.parse(xhr.response);
 id=resp.profile.profileId;
 
